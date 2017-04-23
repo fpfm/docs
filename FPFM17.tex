@@ -89,8 +89,84 @@ A higher inductive type of level 1 (a 1-hit) has constructors for points and pat
 We restrict attention to finitary higher inductive types and present general schemata for the types of their point, path, and surface constructors. 
 We also derive the elimination and equality rules from the types of constructors for 1-hits and 2-hits. 
 Moreover, we construct a groupoid model for dependent type theory with 2-hits and point out that we obtain a setoid model for dependent type theory with 1-hits by truncating the groupoid model.
+
 This is joint work with Hugo Moeneclaey, ENS Cachan
 
+\subsection*{Escardó: tba}
+
+
+\subsection*{Kaposi: Formalisation of the metatheory of type theory using quotient inductive types}
+
+In this talk, I will investigate the formalisation of the metatheory of type theory in proof assistants based on intensional type theory using Agda as a vehicle. 
+I will show how the syntax of type theory can be given as a quotient inductive inductive type (QIIT) and how this can be implemented in Agda. 
+I argue that the QIIT-formalisation is a higher level approach than the traditional syntax (using preterms and typing relations): 
+we can only talk about well-typed terms and every construction needs to respect the conversion relation. 
+I will discuss how the QIIT-syntax relates to the old style syntax. I will show how models of type theory can be formalised using this approach and how parametricity and normalisation can be proved.
+
+This is joint work with Thorsten Altenkirch and András Kovács.
+
+\subsection*{Larchey-Wendling: Kruskal's tree theorem in Type theory}
+
+We present a Coq mechanisation of a purely inductive proof of Kruskal's theorem.
+
+Contrary to classical proofs, there are few instances of intuitionistic proofs for Kruskal's theorem. 
+Some require the assumption that the ground relation is decidable (e.g. [1,2]). 
+Veldman's [3] is the only published proof that does not require that decidability, but it requires `Brouwer's thesis'. Moreover, no intuitionistic proof had been mechanized before.
+
+We implement a typed variant of Veldman's intuitionistic proof where the axiom called `Brouwer's thesis' is not necessary: our proof is `axiom free'.
+
+We use Coquand's [4] inductive definition of Almost Full relations as an alternative to Veldman's. We present the architecture of the proof:
+the Ramsey and FAN theorems, combinatorial principles and evaluation maps. We replace Veldman's `stump' based induction by lexicographic products of relations well-founded upto a projection.
+
+\bigskip
+
+\noindent
+[1] J. Goubault-Larrecq. A Constructive Proof of the Topological Kruskal Theorem.
+
+\noindent
+[2] M. Seisenberger. On the Constructive Content of Proofs.
+
+\noindent
+[3] W. Veldman. An intuitionistic proof of Kruskal's theorem.
+
+\noindent
+[4] D. Vytiniotis et al. Stop When You Are Almost-Full.
+
+
+\subsection*{Luo: MTT-semantics and Its Formalisation}
+
+This talk gives an overview of some recent work on formal semantics for NLs in modern type theories (MTT-semantics) and its formalisation in Coq.
+
+\subsection*{Maggesi: De Bruijn Monads}
+
+We propose an explanation for the success of the de Bruijn encoding of the syntax associated to a (higher-order) signature Sigma. 
+Indeed, we show how it can be viewed as the initial representation of Sigma in relative monads (in the sense of Altenkirch, Chapman, and Uustalu) on a very simple functor.  
+This functor is the embedding into the category Set of its full subcategory with one object N (the set of natural numbers).  
+This high-level point of view allows us to easily extrapolate several useful "fusion laws" which otherwise might be tricky to devise.
+
+This is joint work with André Hirschowitz.
+
+\subsection*{Matthes: Abstract signatures for substitution systems}
+
+A new semantical/categorical notion of signature is introduced that is intended to capture all kinds of syntax with variable binding in the style of inductive families, 
+which could also be called locally nameless or typeful deBruijn representation. 
+In particular, the new notion encompasses the notion of signature introduced by the author and Uustalu that has a strength-like datum and is used to study heterogeneous substitution systems. 
+The latter are based on the presentation of monads with monad multiplication that is notoriously difficult to generalize to the setting of relative monads. 
+Abstract signatures allow definitions relative to a given functor, so that variable names of terms can also be taken from a restricted set, such as the natural numbers. 
+The module concept of Hirschowitz and Maggesi (however, rather the relativization by Ahrens) is adapted through `proto-modules' that come with less data than modules, 
+which is crucial in the construction process. This is work in progress.
+
+
+\subsection*{van der Weide: The Three-HITs Theorem}
+
+We show that all higher inductive types can be constructed from coequalizers, path coequalizers and homotopy colimits. The proof is inspired by Adámek's theorem which constructs inductive types as a colimit of a functor. This way one can reason about all higher inductive types by instead studying a small number of examples.
+
+This is joint work with Andrej Bauer.
+
+\subsection*{Wellen: Formalizing aspects of differential Cohesion in Homotopy Type Theory}
+
+The categories of smooth manifolds or schemes may be faithfully embedded in categories of (higher) sheaves on some site. Statements proven in Homotopy Type Theory may be transferred to such categories of sheaves.
+We demonstrate how a modality in the type theory may be used to access some aspects of the differential geometric structure of the sheaves, given by manifolds or schemes, and provide some basic results concerning a generalized version of the tangent bundle.
 
 
 \end{document}
